@@ -163,17 +163,17 @@ void DataWaitUser(int iCurData)
 	int iPkey=0;
 	int iNkey=0;
 	iDataTotalCount=GetFileDataCount();
-	if(iCurData==1 && iDataTotalCount>1)
+	if(iCurData==1 && iDataTotalCount>1)//=>first data,can only go forward
 	{
 		printf("%s\n",DataInductText[0]);
 		iNkey=1;iPkey=0;
 	}
-	else if(iCurData>1 && iCurData< iDataTotalCount)
+	else if(iCurData>1 && iCurData< iDataTotalCount)//=>data between,can go back and forth
 	{
 		printf("%s\n",DataInductText[1]);
 		iNkey=1;iPkey=1;
 	}
-	else if(iCurData==iDataTotalCount && iDataTotalCount>1)
+	else if(iCurData==iDataTotalCount && iDataTotalCount>1)//=>last data,can only go back
 	{
 		printf("%s\n",DataInductText[2]);
 		iNkey=0;iPkey=1;
