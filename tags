@@ -1,0 +1,91 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Addcontacts	contact/contactbook.c	/^void Addcontacts()$/;"	f
+CC	WebBench/Makefile	/^CC?=		gcc$/;"	m
+CFLAGS	WebBench/Makefile	/^CFLAGS?=	-Wall -ggdb -W -O$/;"	m
+CheckInput	contact/contactbook.c	/^int CheckInput(char *buffer)$/;"	f
+CheckTip	contact/contactbook.c	/^char CheckTip[]={"Number is Empty��Please Retry\\0"};$/;"	v
+ClearScreen	contact/contactbook.c	/^void ClearScreen()$/;"	f
+DH_COMPAT	WebBench/debian/rules	/^export DH_COMPAT=3$/;"	m
+DataInductText	contact/contactbook.c	/^char DataInductText[4][128]={"Press '1' Show Next data,any key return\\0",$/;"	v
+DataWaitUser	contact/contactbook.c	/^void DataWaitUser(int iCurData)$/;"	f
+DeleteData	contact/contactbook.c	/^void DeleteData()$/;"	f
+DeleteTip	contact/contactbook.c	/^char DeleteTip[]="Please Input Delete Data Index?\\0";$/;"	v
+GetFileDataCount	contact/contactbook.c	/^int GetFileDataCount()$/;"	f
+GetSelect	contact/contactbook.c	/^int GetSelect()$/;"	f
+InputData	contact/contactbook.c	/^void InputData(struct contacts* pcontacts)$/;"	f
+InputTelTip	contact/contactbook.c	/^char InputTelTip[]="Please input the number\\0";$/;"	v
+InputTip	contact/contactbook.c	/^char InputTip[6][30]={"Input Name:\\0",	$/;"	v
+LDFLAGS	WebBench/Makefile	/^LDFLAGS?=$/;"	m
+LIBS	WebBench/Makefile	/^LIBS?=$/;"	m
+ListTitle	contact/contactbook.c	/^char ListTitle[7][30]={"Index\\0",$/;"	v
+ListWaitUser	contact/contactbook.c	/^void ListWaitUser(int iCurpage)$/;"	f
+METHOD_GET	WebBench/webbench.c	37;"	d	file:
+METHOD_HEAD	WebBench/webbench.c	38;"	d	file:
+METHOD_OPTIONS	WebBench/webbench.c	39;"	d	file:
+METHOD_TRACE	WebBench/webbench.c	40;"	d	file:
+MenuText	contact/contactbook.c	/^char MenuText[6][28]={"1. Add contacts\\0",	$/;"	v
+PREFIX	WebBench/Makefile	/^PREFIX?=	\/usr\/local\/webbench$/;"	m
+PROGRAM_VERSION	WebBench/webbench.c	41;"	d	file:
+PageInductText	contact/contactbook.c	/^char PageInductText[4][128]={"Press '1' Show Next page,any key return\\0",$/;"	v
+REQUEST_SIZE	WebBench/webbench.c	53;"	d	file:
+SavecontactsToFile	contact/contactbook.c	/^void SavecontactsToFile(struct contacts* pcontacts)$/;"	f
+SearchNumber	contact/contactbook.c	/^void SearchNumber()$/;"	f
+SearchText	contact/contactbook.c	/^char SearchText[6][30]={"Name:\\0",$/;"	v
+ShowRootMenu	contact/contactbook.c	/^void ShowRootMenu()$/;"	f
+ShowWelcome	contact/contactbook.c	/^void ShowWelcome()$/;"	f
+Socket	WebBench/socket.c	/^int Socket(const char *host, int clientPort)$/;"	f
+TMPDIR	WebBench/Makefile	/^TMPDIR=\/tmp\/webbench-$(VERSION)$/;"	m
+TitleText	contact/contactbook.c	/^char TitleText[]="*  shiyanlou contactbook   *\\0";$/;"	v
+VERSION	WebBench/Makefile	/^VERSION=1.5$/;"	m
+ViewData	contact/contactbook.c	/^void ViewData(int iCount)$/;"	f
+ViewList	contact/contactbook.c	/^void ViewList(int iCurpage)$/;"	f
+ViewText	contact/contactbook.c	/^char ViewText[6][30]={"Name:\\0",$/;"	v
+a	Game_2048/game_2048.c	/^int a[4][4] = {0};	\/\/=》4乘4的矩阵，表示16宫格$/;"	v
+alarm_handler	WebBench/webbench.c	/^static void alarm_handler(int signal)$/;"	f	file:
+bench	WebBench/webbench.c	/^static int bench(void)$/;"	f	file:
+benchcore	WebBench/webbench.c	/^void benchcore(const char *host,const int port,const char *req)$/;"	f
+benchtime	WebBench/webbench.c	/^int benchtime=30;$/;"	v
+build_request	WebBench/webbench.c	/^void build_request(const char *url)$/;"	f
+bytes	WebBench/webbench.c	/^int bytes=0;$/;"	v
+cAddress	contact/contactbook.c	/^	char cAddress[128];$/;"	m	struct:contacts	file:
+cHomeTelBuf	contact/contactbook.c	/^	char cHomeTelBuf[80];$/;"	m	struct:contacts	file:
+cNameBuf	contact/contactbook.c	/^	char cNameBuf[50];$/;"	m	struct:contacts	file:
+cOfficTelBuf	contact/contactbook.c	/^	char cOfficTelBuf[80];$/;"	m	struct:contacts	file:
+cQQNumber	contact/contactbook.c	/^	char cQQNumber[60];$/;"	m	struct:contacts	file:
+cTelBuf	contact/contactbook.c	/^	char cTelBuf[80];$/;"	m	struct:contacts	file:
+clients	WebBench/webbench.c	/^int clients=1;$/;"	v
+cnt_one	Game_2048/game_2048.c	/^int cnt_one(int y, int x)$/;"	f
+cnt_value	Game_2048/game_2048.c	/^void cnt_value(int *new_y, int *new_x)$/;"	f
+contacts	contact/contactbook.c	/^struct contacts		$/;"	s	file:
+draw	Game_2048/game_2048.c	/^void draw()$/;"	f
+draw_one	Game_2048/game_2048.c	/^void draw_one(int y, int x)$/;"	f
+empty	Game_2048/game_2048.c	/^int empty;$/;"	v
+failed	WebBench/webbench.c	/^int failed=0;$/;"	v
+force	WebBench/webbench.c	/^int force=0;$/;"	v
+force_reload	WebBench/webbench.c	/^int force_reload=0;$/;"	v
+game_over	Game_2048/game_2048.c	/^int game_over()$/;"	f
+getch	contact/contactbook.c	5;"	d	file:
+host	WebBench/webbench.c	/^char host[MAXHOSTNAMELEN];$/;"	v
+http10	WebBench/webbench.c	/^int http10=1; \/* 0 - http\/0.9, 1 - http\/1.0, 2 - http\/1.1 *\/$/;"	v
+init	Game_2048/game_2048.c	/^void init()$/;"	f
+long_options	WebBench/webbench.c	/^static const struct option long_options[]=$/;"	v	typeref:struct:option	file:
+main	Game_2048/game_2048.c	/^int main()$/;"	f
+main	WebBench/webbench.c	/^int main(int argc, char *argv[])$/;"	f
+main	contact/contactbook.c	/^int main()$/;"	f
+mainloop	contact/contactbook.c	/^void mainloop()$/;"	f
+method	WebBench/webbench.c	/^int method=METHOD_GET;$/;"	v
+mypipe	WebBench/webbench.c	/^int mypipe[2];$/;"	v
+old_x	Game_2048/game_2048.c	/^int old_y, old_x;$/;"	v
+old_y	Game_2048/game_2048.c	/^int old_y, old_x;$/;"	v
+play	Game_2048/game_2048.c	/^void play()$/;"	f
+proxyhost	WebBench/webbench.c	/^char *proxyhost=NULL;$/;"	v
+proxyport	WebBench/webbench.c	/^int proxyport=80;$/;"	v
+request	WebBench/webbench.c	/^char request[REQUEST_SIZE];$/;"	v
+speed	WebBench/webbench.c	/^int speed=0;$/;"	v
+timerexpired	WebBench/webbench.c	/^volatile int timerexpired=0;$/;"	v
+usage	WebBench/webbench.c	/^static void usage(void)$/;"	f	file:
