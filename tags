@@ -5,22 +5,27 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 Addcontacts	contact/contactbook.c	/^void Addcontacts()$/;"	f
+Board	snake-master/src/backend.h	/^} Board;$/;"	t	typeref:struct:__anon1
 CC	WebBench/Makefile	/^CC?=		gcc$/;"	m
 CFLAGS	WebBench/Makefile	/^CFLAGS?=	-Wall -ggdb -W -O$/;"	m
 CheckInput	contact/contactbook.c	/^int CheckInput(char *buffer)$/;"	f
 CheckTip	contact/contactbook.c	/^char CheckTip[]={"Number is Empty��Please Retry\\0"};$/;"	v
 ClearScreen	contact/contactbook.c	/^void ClearScreen()$/;"	f
 DH_COMPAT	WebBench/debian/rules	/^export DH_COMPAT=3$/;"	m
+DOWN	snake-master/src/backend.h	/^enum Direction { UP, DOWN, LEFT, RIGHT };$/;"	e	enum:Direction
 DataInductText	contact/contactbook.c	/^char DataInductText[4][128]={"Press '1' Show Next data,any key return\\0",$/;"	v
 DataWaitUser	contact/contactbook.c	/^void DataWaitUser(int iCurData)$/;"	f
 DeleteData	contact/contactbook.c	/^void DeleteData()$/;"	f
 DeleteTip	contact/contactbook.c	/^char DeleteTip[]="Please Input Delete Data Index?\\0";$/;"	v
+Direction	snake-master/src/backend.h	/^enum Direction { UP, DOWN, LEFT, RIGHT };$/;"	g
+FAILURE	snake-master/src/backend.h	/^enum Status { SUCCESS, FAILURE };$/;"	e	enum:Status
 GetFileDataCount	contact/contactbook.c	/^int GetFileDataCount()$/;"	f
 GetSelect	contact/contactbook.c	/^int GetSelect()$/;"	f
 InputData	contact/contactbook.c	/^void InputData(struct contacts* pcontacts)$/;"	f
 InputTelTip	contact/contactbook.c	/^char InputTelTip[]="Please input the number\\0";$/;"	v
 InputTip	contact/contactbook.c	/^char InputTip[6][30]={"Input Name:\\0",	$/;"	v
 LDFLAGS	WebBench/Makefile	/^LDFLAGS?=$/;"	m
+LEFT	snake-master/src/backend.h	/^enum Direction { UP, DOWN, LEFT, RIGHT };$/;"	e	enum:Direction
 LIBS	WebBench/Makefile	/^LIBS?=$/;"	m
 ListTitle	contact/contactbook.c	/^char ListTitle[7][30]={"Index\\0",$/;"	v
 ListWaitUser	contact/contactbook.c	/^void ListWaitUser(int iCurpage)$/;"	f
@@ -32,20 +37,27 @@ MenuText	contact/contactbook.c	/^char MenuText[6][28]={"1. Add contacts\\0",	$/;
 PREFIX	WebBench/Makefile	/^PREFIX?=	\/usr\/local\/webbench$/;"	m
 PROGRAM_VERSION	WebBench/webbench.c	41;"	d	file:
 PageInductText	contact/contactbook.c	/^char PageInductText[4][128]={"Press '1' Show Next page,any key return\\0",$/;"	v
+PointList	snake-master/src/backend.h	/^struct PointList {$/;"	s
+PointList	snake-master/src/backend.h	/^typedef struct PointList PointList;$/;"	t	typeref:struct:PointList
 REQUEST_SIZE	WebBench/webbench.c	53;"	d	file:
+RIGHT	snake-master/src/backend.h	/^enum Direction { UP, DOWN, LEFT, RIGHT };$/;"	e	enum:Direction
+SUCCESS	snake-master/src/backend.h	/^enum Status { SUCCESS, FAILURE };$/;"	e	enum:Status
 SavecontactsToFile	contact/contactbook.c	/^void SavecontactsToFile(struct contacts* pcontacts)$/;"	f
 SearchNumber	contact/contactbook.c	/^void SearchNumber()$/;"	f
 SearchText	contact/contactbook.c	/^char SearchText[6][30]={"Name:\\0",$/;"	v
 ShowRootMenu	contact/contactbook.c	/^void ShowRootMenu()$/;"	f
 ShowWelcome	contact/contactbook.c	/^void ShowWelcome()$/;"	f
 Socket	WebBench/socket.c	/^int Socket(const char *host, int clientPort)$/;"	f
+Status	snake-master/src/backend.h	/^enum Status { SUCCESS, FAILURE };$/;"	g
 TMPDIR	WebBench/Makefile	/^TMPDIR=\/tmp\/webbench-$(VERSION)$/;"	m
 TitleText	contact/contactbook.c	/^char TitleText[]="*  shiyanlou contactbook   *\\0";$/;"	v
+UP	snake-master/src/backend.h	/^enum Direction { UP, DOWN, LEFT, RIGHT };$/;"	e	enum:Direction
 VERSION	WebBench/Makefile	/^VERSION=1.5$/;"	m
 ViewData	contact/contactbook.c	/^void ViewData(int iCount)$/;"	f
 ViewList	contact/contactbook.c	/^void ViewList(int iCurpage)$/;"	f
 ViewText	contact/contactbook.c	/^char ViewText[6][30]={"Name:\\0",$/;"	v
 a	Game_2048/game_2048.c	/^int a[4][4] = {0};	\/\/=》4乘4的矩阵，表示16宫格$/;"	v
+add_new_food	snake-master/src/backend.c	/^void add_new_food(Board* board) {$/;"	f
 alarm_handler	WebBench/webbench.c	/^static void alarm_handler(int signal)$/;"	f	file:
 bench	WebBench/webbench.c	/^static int bench(void)$/;"	f	file:
 benchcore	WebBench/webbench.c	/^void benchcore(const char *host,const int port,const char *req)$/;"	f
@@ -62,30 +74,49 @@ clients	WebBench/webbench.c	/^int clients=1;$/;"	v
 cnt_one	Game_2048/game_2048.c	/^int cnt_one(int y, int x)$/;"	f
 cnt_value	Game_2048/game_2048.c	/^void cnt_value(int *new_y, int *new_x)$/;"	f
 contacts	contact/contactbook.c	/^struct contacts		$/;"	s	file:
+create_board	snake-master/src/backend.c	/^Board* create_board(PointList* snake, PointList* foods, int xmax, int ymax) {$/;"	f
+create_cell	snake-master/src/backend.c	/^PointList* create_cell(int x, int y) {$/;"	f
+create_random_cell	snake-master/src/backend.c	/^PointList* create_random_cell(int xmax, int ymax) {$/;"	f
+create_snake	snake-master/src/backend.c	/^PointList* create_snake() {$/;"	f
+display_points	snake-master/src/frontend.c	/^void display_points(PointList* snake, const chtype symbol) {$/;"	f
 draw	Game_2048/game_2048.c	/^void draw()$/;"	f
 draw_one	Game_2048/game_2048.c	/^void draw_one(int y, int x)$/;"	f
 empty	Game_2048/game_2048.c	/^int empty;$/;"	v
 failed	WebBench/webbench.c	/^int failed=0;$/;"	v
+foods	snake-master/src/backend.h	/^  PointList* foods;$/;"	m	struct:__anon1
 force	WebBench/webbench.c	/^int force=0;$/;"	v
 force_reload	WebBench/webbench.c	/^int force_reload=0;$/;"	v
 game_over	Game_2048/game_2048.c	/^int game_over()$/;"	f
+get_next_move	snake-master/src/frontend.c	/^enum Direction get_next_move(enum Direction previous) {$/;"	f
 getch	contact/contactbook.c	5;"	d	file:
 host	WebBench/webbench.c	/^char host[MAXHOSTNAMELEN];$/;"	v
 http10	WebBench/webbench.c	/^int http10=1; \/* 0 - http\/0.9, 1 - http\/1.0, 2 - http\/1.1 *\/$/;"	v
 init	Game_2048/game_2048.c	/^void init()$/;"	f
+is_same_place	snake-master/src/backend.c	/^bool is_same_place(PointList* cell1, PointList* cell2) {$/;"	f
+list_contains	snake-master/src/backend.c	/^bool list_contains(PointList* cell, PointList* list) {$/;"	f
 long_options	WebBench/webbench.c	/^static const struct option long_options[]=$/;"	v	typeref:struct:option	file:
 main	Game_2048/game_2048.c	/^int main()$/;"	f
 main	WebBench/webbench.c	/^int main(int argc, char *argv[])$/;"	f
 main	contact/contactbook.c	/^int main()$/;"	f
+main	snake-master/src/main.c	/^int main() {$/;"	f
 mainloop	contact/contactbook.c	/^void mainloop()$/;"	f
 method	WebBench/webbench.c	/^int method=METHOD_GET;$/;"	v
+move_snake	snake-master/src/backend.c	/^enum Status move_snake(Board* board, enum Direction dir) {$/;"	f
 mypipe	WebBench/webbench.c	/^int mypipe[2];$/;"	v
+next	snake-master/src/backend.h	/^  struct PointList* next;$/;"	m	struct:PointList	typeref:struct:PointList::PointList
+next_move	snake-master/src/backend.c	/^PointList* next_move(Board* board, enum Direction dir) {$/;"	f
 old_x	Game_2048/game_2048.c	/^int old_y, old_x;$/;"	v
 old_y	Game_2048/game_2048.c	/^int old_y, old_x;$/;"	v
 play	Game_2048/game_2048.c	/^void play()$/;"	f
 proxyhost	WebBench/webbench.c	/^char *proxyhost=NULL;$/;"	v
 proxyport	WebBench/webbench.c	/^int proxyport=80;$/;"	v
+remove_from_list	snake-master/src/backend.c	/^bool remove_from_list(PointList* elt, PointList** list) {$/;"	f
 request	WebBench/webbench.c	/^char request[REQUEST_SIZE];$/;"	v
+snake	snake-master/src/backend.h	/^  PointList* snake;$/;"	m	struct:__anon1
 speed	WebBench/webbench.c	/^int speed=0;$/;"	v
 timerexpired	WebBench/webbench.c	/^volatile int timerexpired=0;$/;"	v
 usage	WebBench/webbench.c	/^static void usage(void)$/;"	f	file:
+x	snake-master/src/backend.h	/^  int x;$/;"	m	struct:PointList
+xmax	snake-master/src/backend.h	/^  int xmax;$/;"	m	struct:__anon1
+y	snake-master/src/backend.h	/^  int y;$/;"	m	struct:PointList
+ymax	snake-master/src/backend.h	/^  int ymax;$/;"	m	struct:__anon1

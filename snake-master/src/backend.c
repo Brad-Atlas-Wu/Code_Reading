@@ -73,6 +73,7 @@ enum Status move_snake(Board* board, enum Direction dir) {
   return SUCCESS;
 }
 
+//->对比新出现的食物和蛇/其他食物是不是同一位置
 bool is_same_place(PointList* cell1, PointList* cell2) {
   return cell1->x == cell2->x && cell1->y == cell2->y;
 }
@@ -116,8 +117,16 @@ void add_new_food(Board* board) {
   board->foods = new_food;
 }
 
+/*->
+ * 循环判断蛇/食物指针是否指向有效位置
+ * 	是：
+ * 	对比新出现的食物和蛇/其他食物是否在同一位置
+ *		是：结束循环，返回真
+ *		否：继续循环，蛇/食物向next移动
+ *	否：返回假
+ * */
 bool list_contains(PointList* cell, PointList* list) {
-  PointList* s = list;
+  PointList* s = list;//->定义一个临时指针，等于food/snake
   while (s) {
     if (is_same_place(s, cell)) {
       return true;
@@ -144,7 +153,7 @@ Board* create_board(PointList* snake, PointList* foods, int xmax, int ymax) {
   return board;
 }
 
-PointList* create_snake() {
+  PointList* create_snake() {
   PointList* a = create_cell(2,3);
   PointList* b = create_cell(2,2);
   a->next = b;

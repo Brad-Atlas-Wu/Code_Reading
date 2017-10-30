@@ -2,6 +2,8 @@
 
 enum Direction { UP, DOWN, LEFT, RIGHT };
 enum Status { SUCCESS, FAILURE };
+
+/*->是一个链表结构*/
 struct PointList {
   int x;
   int y;
