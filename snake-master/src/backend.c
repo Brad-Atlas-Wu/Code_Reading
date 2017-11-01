@@ -10,18 +10,18 @@
 bool remove_from_list(PointList* elt, PointList** list) {
   PointList *currP, *prevP;
   prevP = NULL;
-
+	
   for (currP = *list;
       currP != NULL;
       prevP = currP, currP = currP->next) {
     if (is_same_place(currP, elt)) {
-      if (prevP == NULL) {
+      if (prevP == NULL) {//->被吃的食物是链表的第一个，删除
         *list = currP->next;
       } else {
-        prevP->next = currP->next;
+        prevP->next = currP->next;//->被吃的食物是链表的某中间一环或最后一个，删除
       }
       free(currP);
-      return true;
+      return true;//->成功删除被吃的食物
     }
   }
   return false;
@@ -30,18 +30,18 @@ bool remove_from_list(PointList* elt, PointList** list) {
 enum Status move_snake(Board* board, enum Direction dir) {
   // Create a new beginning. Check boundaries.
   PointList* beginning = next_move(board, dir);
-  if (beginning == NULL) {
+  if (beginning == NULL) {//->撞墙了
     return FAILURE;
-  }
+}
 
   // If we've gone backwards, don't do anything
   if (board->snake->next && is_same_place(beginning, board->snake->next)) {
-    beginning->next = NULL;
+    beginning->next = NULL;//->往回走，忽视
     free(beginning);
     return SUCCESS;
   }
 
-  // Check for collisions
+  // Check for collisions//->检测是否撞到自己
   if (list_contains(beginning, board->snake)) {
     return FAILURE;
   }
@@ -49,25 +49,26 @@ enum Status move_snake(Board* board, enum Direction dir) {
   // Check for food
   if (list_contains(beginning, board->foods)) {
     // Attach the beginning to the rest of the snake;
-    beginning->next = board->snake;
+    beginning->next = board->snake;//->吃到食物，在前面加长一节
     board->snake = beginning;
-    remove_from_list(beginning, &(board->foods));
+    remove_from_list(beginning, &(board->foods));//->用删除链表元素的方法，删除掉刚刚被吃的食物
     add_new_food(board);
 
     return SUCCESS;
   }
 
-  // Attach the beginning to the rest of the snake
+
+  // Attach the beginning to the rest of the snake//-> 蛇头多一格
   beginning->next = board->snake;
   board->snake = beginning;
 
 
-  // Cut off the end
+  // Cut off the end				//-》蛇尾消除掉一格（确切说是全部前移一格）
   PointList* end = board->snake;
   while(end->next->next) {
     end = end->next;
   }
-  free(end->next);
+  free(end->next);//最后一格丢掉
   end->next = NULL;
 
   return SUCCESS;
@@ -108,13 +109,16 @@ PointList* create_random_cell(int xmax, int ymax) {
   return create_cell(rand() % xmax, rand() % ymax);
 }
 
+/*求新事物坐标，并且与之前的食物连接起来（链表）*/
 void add_new_food(Board* board) {
   PointList* new_food;
+/*->为新食物产生坐标（和其他食物/蛇的坐标不重合）*/
   do {
     new_food = create_random_cell(board->xmax, board->ymax);
-  } while(list_contains(new_food, board->foods) || list_contains(new_food, board->snake));
+  } while(list_contains(new_food, board->foods) || list_contains(new_food, board->snake));//-》判断新食物坐标和其他食物/蛇不重叠
+
   new_food->next = board->foods;
-  board->foods = new_food;
+  board->foods = new_food;//这里是利用board->foods为中间量，所以是把新食物与之前的食物连接起来
 }
 
 /*->
